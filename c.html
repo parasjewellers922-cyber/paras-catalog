@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#7A1F2B">
+  <title>Paras Jewellers · Designs for you</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --maroon: #7A1F2B; --deep: #5E1621; --gold: #8A6418; --gold-bright: #C9A24A; --light-gold: #E2C784;
+      --brown: #3E2723; --muted: #6D5A52; --ivory: #FFFBF5; --ground: #F7F1EA; --line: #E8DCCF;
+      --photo: #F6F0E4; --green: #2E7D4F; --amber: #B07A1E;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; background: var(--ground); color: var(--brown); font-family: Poppins, system-ui, sans-serif; }
+    body { padding-bottom: calc(96px + env(safe-area-inset-bottom)); }
+    .serif { font-family: 'Playfair Display', Georgia, serif; }
+    header { background: var(--maroon); color: var(--ivory); padding: calc(18px + env(safe-area-inset-top)) 16px 20px; }
+    .brand { display: flex; align-items: center; gap: 12px; max-width: 1100px; margin: 0 auto; }
+    .brand img { width: 40px; height: auto; }
+    .shop { font-size: 11px; font-weight: 600; letter-spacing: 1.6px; color: var(--light-gold); text-transform: uppercase; }
+    h1 { margin: 2px 0 0; font-size: 26px; font-weight: 600; line-height: 1.15; }
+    .sub { max-width: 1100px; margin: 10px auto 0; font-size: 13px; color: var(--light-gold); }
+    main { max-width: 1100px; margin: 0 auto; padding: 16px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 12px; }
+    @media (min-width: 700px) { .grid { grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; } }
+    .card { background: #fff; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; cursor: pointer;
+            display: flex; flex-direction: column; text-align: left; padding: 0; font: inherit; color: inherit; }
+    .card:active { transform: scale(0.99); }
+    .photo { aspect-ratio: 2 / 3; background: var(--photo); display: flex; align-items: center; justify-content: center; position: relative; }
+    .photo img { width: 100%; height: 100%; object-fit: contain; }
+    .photo .none { color: var(--gold-bright); font-size: 30px; }
+    .tag { position: absolute; top: 8px; left: 8px; background: rgba(176,122,30,0.12); color: var(--amber);
+           border-radius: 999px; padding: 2px 9px; font-size: 11px; font-weight: 600; }
+    .info { padding: 9px 11px 11px; }
+    .name { font-family: 'Playfair Display', Georgia, serif; font-size: 16px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .meta { font-size: 12px; color: var(--muted); }
+    .price { font-size: 15px; font-weight: 600; color: var(--gold); margin-top: 2px; }
+    .note { font-size: 12px; color: var(--muted); margin: 18px 0 0; line-height: 1.5; }
+    .bar { position: fixed; left: 0; right: 0; bottom: 0; background: var(--brown); padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
+           display: flex; gap: 10px; justify-content: center; box-shadow: 0 -2px 10px rgba(0,0,0,0.15); }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; border-radius: 12px; padding: 13px 18px;
+           font: 600 15px Poppins, sans-serif; text-decoration: none; border: 0; cursor: pointer; }
+    .btn.wa { background: #25D366; color: #fff; flex: 1; max-width: 380px; }
+    .btn.call { background: transparent; color: var(--light-gold); border: 1px solid var(--light-gold); }
+    .state { text-align: center; padding: 60px 20px; color: var(--muted); }
+    .state h2 { font-family: 'Playfair Display', Georgia, serif; color: var(--brown); font-size: 22px; margin: 0 0 8px; }
+    .overlay { position: fixed; inset: 0; background: rgba(30,15,12,0.75); display: none; align-items: center; justify-content: center; z-index: 10; padding: 16px; }
+    .overlay.open { display: flex; }
+    .sheet { background: var(--ivory); border-radius: 18px; max-width: 900px; width: 100%; max-height: 92vh; overflow: auto; display: grid; grid-template-columns: 1fr; }
+    @media (min-width: 760px) { .sheet { grid-template-columns: 1fr 1fr; } }
+    .sheet .photo { border-radius: 18px 18px 0 0; }
+    @media (min-width: 760px) { .sheet .photo { border-radius: 18px 0 0 18px; } }
+    .detail { padding: 18px 20px 22px; display: flex; flex-direction: column; gap: 6px; }
+    .detail .name { font-size: 24px; white-space: normal; }
+    .detail .price { font-size: 22px; }
+    .close { position: absolute; top: 14px; right: 14px; width: 40px; height: 40px; border-radius: 50%; border: 0;
+             background: rgba(255,255,255,0.92); font-size: 20px; cursor: pointer; z-index: 11; }
+    .addr { font-size: 12px; color: var(--muted); text-align: center; margin-top: 22px; line-height: 1.5; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <img src="icons/splash-logo.png" alt="">
+      <div>
+        <div class="shop">Paras Jewellers</div>
+        <h1 class="serif" id="title">Designs for you</h1>
+      </div>
+    </div>
+    <div class="sub" id="sub"></div>
+  </header>
+  <main>
+    <div class="state" id="state"><h2>Loading…</h2></div>
+    <div class="grid" id="grid"></div>
+    <p class="note" id="note"></p>
+    <p class="addr" id="addr"></p>
+  </main>
+  <div class="bar" id="bar">
+    <a class="btn wa" id="wa" target="_blank" rel="noopener">WhatsApp us</a>
+    <a class="btn call" id="call">Call</a>
+  </div>
+  <div class="overlay" id="overlay" role="dialog" aria-modal="true">
+    <button class="close" id="close" aria-label="Close">✕</button>
+    <div class="sheet" id="sheet"></div>
+  </div>
+  <script>
+  (function () {
+    'use strict';
+    // Public settings of the shop's Firebase project (they identify it; access
+    // is controlled by its security rules: a link can be read until it expires).
+    var PROJECT = 'paras-jewellers-app-f8f0a';
+    var API_KEY = 'AIzaSyBuNjsWe2xsjFjLKDCnzh_-1C9UyefUTA4';
+    var FALLBACK_PHONE = '919224280990';
+    var DOC = 'projects/' + PROJECT + '/databases/(default)/documents/shares/';
+    var API = 'https://firestore.googleapis.com/v1/';
+
+    var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    function day(d) { return d.getDate() + ' ' + months[d.getMonth()]; }
+    function inr(n) {
+      var s = Math.round(n).toString(), last3 = s.slice(-3), rest = s.slice(0, -3);
+      if (rest) last3 = ',' + last3;
+      return '₹' + rest.replace(/\B(?=(\d{2})+(?!\d))/g, ',') + last3;
+    }
+    function grams(g) { return Number(g).toFixed(3) + ' g'; }
+    function esc(s) {
+      return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
+        return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+      });
+    }
+    // Firestore REST values to plain JavaScript.
+    function plain(v) {
+      if (!v) return null;
+      if ('stringValue' in v) return v.stringValue;
+      if ('integerValue' in v) return Number(v.integerValue);
+      if ('doubleValue' in v) return Number(v.doubleValue);
+      if ('booleanValue' in v) return v.booleanValue;
+      if ('timestampValue' in v) return new Date(v.timestampValue);
+      if ('nullValue' in v) return null;
+      if ('arrayValue' in v) return (v.arrayValue.values || []).map(plain);
+      if ('mapValue' in v) return fields(v.mapValue.fields || {});
+      return null;
+    }
+    function fields(f) { var o = {}; for (var k in f) o[k] = plain(f[k]); return o; }
+
+    var $ = function (id) { return document.getElementById(id); };
+    function setPhone(phone, text) {
+      var p = phone || FALLBACK_PHONE;
+      $('wa').href = 'https://wa.me/' + p + '?text=' + encodeURIComponent(text || 'Hello Paras Jewellers, ');
+      $('call').href = 'tel:+' + p;
+    }
+    function state(title, text) {
+      $('state').innerHTML = '<h2>' + esc(title) + '</h2><div>' + esc(text) + '</div>';
+      $('state').style.display = '';
+    }
+    setPhone(FALLBACK_PHONE);
+
+    var id = new URLSearchParams(location.search).get('id');
+    if (!id || !/^[A-Za-z0-9]{10,40}$/.test(id)) {
+      state('Link not found', 'Please check the link, or message us on WhatsApp.');
+      return;
+    }
+
+    fetch(API + DOC + id + '?key=' + API_KEY)
+      .then(function (r) {
+        if (r.status === 403) throw new Error('ended');
+        if (r.status === 404) throw new Error('missing');
+        if (!r.ok) throw new Error('error');
+        return r.json();
+      })
+      .then(function (doc) { show(fields(doc.fields || {})); countView(); })
+      .catch(function (e) {
+        if (e.message === 'ended') {
+          state('This link has ended', 'The designs were shared for a limited time. Message us on WhatsApp for the latest designs and prices.');
+        } else if (e.message === 'missing') {
+          state('Link not found', 'It may have been removed. Message us on WhatsApp and we will share the designs again.');
+        } else {
+          state('Could not open the designs', 'Check your internet connection and open the link again.');
+        }
+      });
+
+    // Counts an opening once per browser tab (so the shop sees it was opened).
+    function countView() {
+      try {
+        var key = 'seen:' + id;
+        if (sessionStorage.getItem(key)) return;
+        sessionStorage.setItem(key, '1');
+      } catch (e) { /* private mode: count anyway */ }
+      fetch(API + 'projects/' + PROJECT + '/databases/(default)/documents:commit?key=' + API_KEY, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ writes: [{ transform: {
+          document: DOC + id,
+          fieldTransforms: [
+            { fieldPath: 'views', increment: { integerValue: '1' } },
+            { fieldPath: 'lastViewedAt', setToServerValue: 'REQUEST_TIME' }
+          ]
+        } }] })
+      }).catch(function () {});
+    }
+
+    function show(link) {
+      $('state').style.display = 'none';
+      var shop = link.shopName || 'Paras Jewellers';
+      document.title = shop + ' · ' + (link.title || 'Designs for you');
+      $('title').textContent = link.title || 'Designs picked for you';
+      var items = link.items || [];
+      var made = link.createdAt instanceof Date ? link.createdAt : new Date();
+      var until = link.expiresAt instanceof Date ? link.expiresAt : null;
+      $('sub').textContent = items.length + (items.length === 1 ? ' design' : ' designs') +
+        (until ? ' · this link is open till ' + day(until) : '');
+      setPhone(link.shopPhone, 'Hello ' + shop + ', I saw the designs you sent me' +
+        (link.title ? ' (' + link.title + ')' : '') + '. ');
+      $('note').textContent = link.showPrices
+        ? 'Prices are estimates at gold and silver rates of ' + day(made) + ', including GST. The final amount is confirmed at the shop.'
+        : 'Ask us for today’s price of any design.';
+      $('addr').textContent = link.shopAddress || '';
+      var grid = $('grid');
+      items.forEach(function (it, i) {
+        var b = document.createElement('button');
+        b.className = 'card';
+        b.innerHTML =
+          '<div class="photo">' + (it.thumb ? '<img loading="lazy" alt="" src="' + esc(it.thumb) + '">' : '<span class="none">◆</span>') +
+          (it.inStock === false ? '<span class="tag">Made to order</span>' : '') + '</div>' +
+          '<div class="info"><div class="name">' + esc(it.name) + '</div>' +
+          '<div class="meta">' + esc(it.purity) + ' · ' + grams(it.weight) + '</div>' +
+          (link.showPrices && it.price != null ? '<div class="price">' + inr(it.price) + '</div>' : '') + '</div>';
+        b.onclick = function () { open(it, link); };
+        grid.appendChild(b);
+      });
+    }
+
+    function open(it, link) {
+      var shop = link.shopName || 'Paras Jewellers';
+      var ask = 'Hello ' + shop + ', I would like to know more about ' + it.name +
+        (it.code ? ' (' + it.code + ')' : '') + ' from the designs you sent me.';
+      $('sheet').innerHTML =
+        '<div class="photo">' + (it.photo ? '<img alt="" src="' + esc(it.photo) + '">' : '<span class="none">◆</span>') + '</div>' +
+        '<div class="detail"><div class="name">' + esc(it.name) + '</div>' +
+        '<div class="meta">' + esc(it.category) + '</div>' +
+        '<div class="meta">' + esc(it.purity) + ' · ' + grams(it.weight) +
+        (it.inStock === false ? ' · Made to order' : ' · In the shop') + '</div>' +
+        (link.showPrices && it.price != null ? '<div class="price">' + inr(it.price) + '</div><div class="meta">Estimated price with GST</div>' : '') +
+        '<div style="height:10px"></div>' +
+        '<a class="btn wa" target="_blank" rel="noopener" href="https://wa.me/' + esc(link.shopPhone || FALLBACK_PHONE) +
+        '?text=' + encodeURIComponent(ask) + '">Ask about this design on WhatsApp</a></div>';
+      $('overlay').classList.add('open');
+    }
+    function closeSheet() { $('overlay').classList.remove('open'); }
+    $('close').onclick = closeSheet;
+    $('overlay').onclick = function (e) { if (e.target === $('overlay')) closeSheet(); };
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeSheet(); });
+  })();
+  </script>
+</body>
+</html>
