@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <base href="/paras-catalog/">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Paras Jewellers catalog and quotations (staff only).">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#7A1F2B">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Paras Catalog">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="manifest" href="manifest.json">
+  <title>Paras Catalog</title>
+  <style>
+    html, body { margin: 0; height: 100%; background: #7A1F2B; }
+    #loading {
+      position: fixed; inset: 0; display: flex; flex-direction: column;
+      align-items: center; justify-content: center; gap: 18px;
+      font-family: sans-serif; color: #E2C784; font-size: 14px; letter-spacing: 1px;
+    }
+    #loading img { width: 120px; height: auto; }
+  </style>
+</head>
+<body>
+  <div id="loading">
+    <img src="icons/splash-logo.png" alt="Paras Jewellers">
+    <div>Loading…</div>
+  </div>
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>
