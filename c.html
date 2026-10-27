@@ -205,7 +205,7 @@
         var b = document.createElement('button');
         b.className = 'card';
         b.innerHTML =
-          '<div class="photo">' + (it.thumb ? '<img loading="lazy" alt="" src="' + esc(it.thumb) + '">' : '<span class="none">◆</span>') +
+          '<div class="photo">' + (it.thumb ? '<img loading="lazy" alt="" src="' + esc(it.thumb) + '" onerror="noPhoto(this)">' : '<span class="none">◆</span>') +
           (it.inStock === false ? '<span class="tag">Made to order</span>' : '') + '</div>' +
           '<div class="info"><div class="name">' + esc(it.name) + '</div>' +
           '<div class="meta">' + esc(it.purity) + ' · ' + grams(it.weight) + '</div>' +
@@ -215,12 +215,23 @@
       });
     }
 
+    // A photo that can't load (replaced or removed since the link was made):
+    // try the small copy, then show the plain diamond.
+    window.noPhoto = function (img) {
+      var alt = img.getAttribute('data-alt');
+      if (alt && img.src !== alt) { img.removeAttribute('data-alt'); img.src = alt; return; }
+      var s = document.createElement('span');
+      s.className = 'none';
+      s.textContent = '◆';
+      img.replaceWith(s);
+    };
+
     function open(it, link) {
       var shop = link.shopName || 'Paras Jewellers';
       var ask = 'Hello ' + shop + ', I would like to know more about ' + it.name +
         (it.code ? ' (' + it.code + ')' : '') + ' from the designs you sent me.';
       $('sheet').innerHTML =
-        '<div class="photo">' + (it.photo ? '<img alt="" src="' + esc(it.photo) + '">' : '<span class="none">◆</span>') + '</div>' +
+        '<div class="photo">' + (it.photo ? '<img alt="" src="' + esc(it.photo) + '" data-alt="' + esc(it.thumb || '') + '" onerror="noPhoto(this)">' : '<span class="none">◆</span>') + '</div>' +
         '<div class="detail"><div class="name">' + esc(it.name) + '</div>' +
         '<div class="meta">' + esc(it.category) + '</div>' +
         '<div class="meta">' + esc(it.purity) + ' · ' + grams(it.weight) +
