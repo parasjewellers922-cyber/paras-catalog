@@ -37,8 +37,21 @@ if (!window._flutter) {
 _flutter.buildConfig = {"engineRevision":"ef0cd000916d64fa0c5d09cc809fa7ad244a5767","builds":[{"compileTarget":"dart2js","renderer":"canvaskit","mainJsPath":"main.dart.js"}]};
 
 
-_flutter.loader.load({
-  serviceWorkerSettings: {
-    serviceWorkerVersion: "2840980316"
-  }
-});
+// Started by start_app.js once this site's own Firebase files are loaded.
+window.parasStartFlutter = function () {
+  _flutter.loader.load({
+    // The graphics engine from this site, not www.gstatic.com.
+    config: { canvasKitBaseUrl: 'canvaskit/' },
+    serviceWorkerSettings: {
+      serviceWorkerVersion: "2149450218",
+    },
+    onEntrypointLoaded: async function (engineInitializer) {
+      const appRunner = await engineInitializer.initializeEngine({
+        canvasKitBaseUrl: 'canvaskit/',
+      });
+      await appRunner.runApp();
+      window.parasAppStarted();
+    },
+  });
+};
+window.parasStartFlutter();

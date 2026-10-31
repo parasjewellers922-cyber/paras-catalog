@@ -23,6 +23,12 @@
       font-family: sans-serif; color: #E2C784; font-size: 14px; letter-spacing: 1px;
     }
     #loading img { width: 120px; height: auto; }
+    #loading .stuck { max-width: 340px; text-align: center; line-height: 1.5; letter-spacing: 0; }
+    #loading .stuck button {
+      margin-top: 12px; padding: 10px 22px; border: 0; border-radius: 10px;
+      background: #E2C784; color: #3A0F16; font-size: 15px; font-weight: bold; cursor: pointer;
+    }
+    #loading .stuck small { display: block; margin-top: 10px; opacity: .7; word-break: break-word; }
   </style>
 </head>
 <body>
@@ -32,6 +38,6 @@
   </div>
   <script src="barcode_scan.js"></script>
   <script src="leave_warning.js"></script>
-  <script src="flutter_bootstrap.js" async></script>
+  <script src="start_app.js"></script>
 </body>
 </html>
