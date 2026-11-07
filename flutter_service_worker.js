@@ -5,7 +5,7 @@ const CACHE_NAME = 'flutter-app-cache';
 
 const RESOURCES = {"index.html": "8815dff9a48eefef3e551fe73071b247",
 "/": "8815dff9a48eefef3e551fe73071b247",
-"flutter_bootstrap.js": "c8911b3f6d5d2b673bff8b7f76b3a8da",
+"flutter_bootstrap.js": "377bd0a50c82ae44e13ce8f902b98118",
 "barcode_scan.js": "e79114415f8c6083295c56ae3f801331",
 "start_app.js": "939bbe85ee20dc2fc3baf9263d29638b",
 "canvaskit/chromium/canvaskit.js": "8191e843020c832c9cf8852a4b909d4c",
@@ -41,7 +41,7 @@ const RESOURCES = {"index.html": "8815dff9a48eefef3e551fe73071b247",
 "icons/splash-logo.png": "c784c3ac388e58541bc624dd9be6f901",
 "icons/Icon-maskable-192.png": "29c8f1ba65efe52c01a6cab1c5cbb323",
 "manifest.json": "c2fe58282970f26dcb41c66ebfcf49ff",
-"version.json": "191c84f334443c5e4746321c2c919217",
+"version.json": "e8857bbaa0589ec583c37ef71f2e6401",
 "c.html": "c13c091db0bb00e12e5fb0d40d25b845",
 "main.dart.js": "ef5c797e16a2fef67f95b1c7d6f190cd",
 "leave_warning.js": "7b84ae3a444c48d572e87f8a4b4d3dad"};

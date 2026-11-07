@@ -43,7 +43,7 @@ window.parasStartFlutter = function () {
     // The graphics engine from this site, not www.gstatic.com.
     config: { canvasKitBaseUrl: 'canvaskit/' },
     serviceWorkerSettings: {
-      serviceWorkerVersion: "237656297",
+      serviceWorkerVersion: "565726001",
     },
     onEntrypointLoaded: async function (engineInitializer) {
       const appRunner = await engineInitializer.initializeEngine({
