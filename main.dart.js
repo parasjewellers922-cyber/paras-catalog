@@ -88790,85 +88790,83 @@ p=$.NY()
 q=B.i.H(q)
 m=s.bbQ(p.b.test(q.toUpperCase()),c1.a.d===B.aq)}q=t.w
 l=A.bj(c2,B.bt,q).w.a.a>=980
-p=t.p
-k=A.a([],p)
-j=b5.a
-i=j.c
-if(i!=null){h=A.aT(10)
-B.e.G(k,A.a([A.aQ(b6,A.o("Exchange for "+i.c+": its "+A.af(j.d)+" is held for the customer and used on this bill. Tap the piece being returned and remove it, then scan the new piece. Pieces kept stay at the old price.",b6,b6,b6,b6,B.dK,b6,b6,b6),B.y,b6,b6,new A.b8(B.dB,b6,b6,h,b6,b6,B.ab),b6,b6,b6,B.dp,b6,b6,b6),B.a3],p))}g=b5.d
-j=g==null
-h=j?b6:g.c
-h=A.o(h==null?"Walk-in customer":h,b6,b6,b6,b6,B.o_,b6,b6,b6)
-if(j)f="Pick a customer for udhaar, old metal or bills above \u20b92 lakh"
-else{f=A.a([],t.s)
-e=g.d
-if(e.length!==0)f.push(e)
-if((r?g.at:g.Q)>0.5)f.push("owes "+A.af(r?g.at:g.Q))
-if(o>0.5)f.push("holds "+A.af(o))
-f=B.e.Z(f," \xb7 ")}f=A.ag(A.a1(A.a([h,A.o(f,b6,b6,b6,b6,B.af,b6,b6,b6)],p),B.ad,B.q,B.r),1)
-j=j?"Pick customer":"Change"
-h=b5.c
-h.toString
-k.push(A.dv(A.ak(A.a([f,A.j6(!1,A.o(A.bj(h,B.bt,q).w.a.a>=980?j+" \xb7 F1":j,b6,b6,b6,b6,b6,b6,b6,b6),b6,b6,b6,b6,b6,b6,b5.gaUC(),b6,b6)],p),B.A,B.q,B.r,b6),B.a0,B.d5))
-k.push(B.a3)
-k.push(b5.aYd())
-k.push(B.a3)
+k=b5.d
+p=k==null
+j=p?b6:k.c
+j=A.o(j==null?"Walk-in customer":j,b6,b6,b6,b6,B.o_,b6,b6,b6)
+if(p)i="Pick a customer for udhaar, old metal or bills above \u20b92 lakh"
+else{i=A.a([],t.s)
+h=k.d
+if(h.length!==0)i.push(h)
+if((r?k.at:k.Q)>0.5)i.push("owes "+A.af(r?k.at:k.Q))
+if(o>0.5)i.push("holds "+A.af(o))
+i=B.e.Z(i," \xb7 ")}h=t.p
+i=A.ag(A.a1(A.a([j,A.o(i,b6,b6,b6,b6,B.af,b6,b6,b6)],h),B.ad,B.q,B.r),1)
+p=p?"Pick customer":"Change"
+j=b5.c
+j.toString
+p=A.a([A.dv(A.ak(A.a([i,A.j6(!1,A.o(A.bj(j,B.bt,q).w.a.a>=980?p+" \xb7 F1":p,b6,b6,b6,b6,b6,b6,b6,b6),b6,b6,b6,b6,b6,b6,b5.gaUC(),b6,b6)],h),B.A,B.q,B.r,b6),B.a0,B.d5),B.a3],h)
+i=b5.a
+g=i.c
+if(g!=null){j=A.aT(10)
+B.e.G(p,A.a([A.aQ(b6,A.o("Exchange for "+g.c+": its "+A.af(i.d)+" is held for the customer and used on this bill. Tap the piece being returned and remove it, then scan the new piece. Pieces kept stay at the old price.",b6,b6,b6,b6,B.dK,b6,b6,b6),B.y,b6,b6,new A.b8(B.dB,b6,b6,j,b6,b6,B.ab),b6,b6,b6,B.dp,b6,b6,b6),B.a3],h))}p.push(b5.aYd())
+p.push(B.a3)
 if(n.length===0){j=A.aT(14)
-k.push(A.aQ(b6,B.bST,B.y,b6,b6,new A.b8(B.N,b6,A.dZ(B.aZ,1),j,b6,b6,B.ab),b6,b6,b6,B.H,b6,b6,b6))}else{j=A.a([],p)
-for(h=s.a,d=0;d<h.length;++d)j.push(b5.aQ8(d,h[d]))
-k.push(A.or(!1,b6,new A.cu(j,b6),b6,b6,b6,b5.as,!0,b6,b6,b6,b6,b6,b6))}if(l&&n.length!==0)k.push(new A.U(B.cJ,A.o(b5.as.gcN()?"\u2191\u2193 pick a line \xb7 M or Enter making \xb7 D discount \xb7 Del remove \xb7 Esc back to the tag box":"\u2191 from the tag box picks a line \xb7 F8 loose / coin \xb7 F9 final amount \xb7 Alt+C cash \xb7 Alt+U UPI \xb7 Alt+B bank \xb7 Ctrl+P save & print",b6,b6,b6,b6,B.dJ,b6,b6,b6),b6))
-k.push(B.a3)
+p.push(A.aQ(b6,B.bST,B.y,b6,b6,new A.b8(B.N,b6,A.dZ(B.aZ,1),j,b6,b6,B.ab),b6,b6,b6,B.H,b6,b6,b6))}else{j=A.a([],h)
+for(i=s.a,f=0;f<i.length;++f)j.push(b5.aQ8(f,i[f]))
+p.push(A.or(!1,b6,new A.cu(j,b6),b6,b6,b6,b5.as,!0,b6,b6,b6,b6,b6,b6))}if(l&&n.length!==0)p.push(new A.U(B.cJ,A.o(b5.as.gcN()?"\u2191\u2193 pick a line \xb7 M or Enter making \xb7 D discount \xb7 Del remove \xb7 Esc back to the tag box":"\u2191 from the tag box picks a line \xb7 F8 loose / coin \xb7 F9 final amount \xb7 Alt+C cash \xb7 Alt+U UPI \xb7 Alt+B bank \xb7 Ctrl+P save & print",b6,b6,b6,b6,B.dJ,b6,b6,b6),b6))
+p.push(B.a3)
 if(n.length!==0)j=b5.id||b5.gB5()
 else j=!1
-if(j)B.e.G(k,b5.aCc(s))
+if(j)B.e.G(p,b5.aCc(s))
 if(n.length!==0&&!b5.id&&!b5.gB5()){j=b5.c
 j.toString
-k.push(new A.e4(B.cT,b6,b6,A.dp(B.afV,b6,A.o(A.bj(j,B.bt,q).w.a.a>=980?"Customer agreed a final amount? \xb7 F9":"Customer agreed a final amount?",b6,b6,b6,b6,b6,b6,b6,b6),new A.bhN(b5),b6),b6))}j=c1.a.d===B.aq
-if(j)k.push(A.cs(A.a([A.np(B.bSI,new A.bhO(b5),b5.x,b6)],p),B.aL,8,8))
-if(!j){h=b5.c.A(b9).f.a
-h===$&&A.b()
-k.push(new A.U(B.cQ,A.o("Staff limit: making down by up to "+B.f.v(h.ch.a.ch.f,0)+" points; more needs the owner's PIN",b6,b6,b6,b6,B.a_C,b6,b6,b6),b6))}h=s.Q
-h===$&&A.b()
-h=A.bb(h)
-f=s.x
-f=f!=null&&A.c5B(b5.gM8()).length===1?"Making "+new A.eq(B.br,f,!1).gd5():"Making"
-e=s.as
-e===$&&A.b()
+p.push(new A.e4(B.cT,b6,b6,A.dp(B.afV,b6,A.o(A.bj(j,B.bt,q).w.a.a>=980?"Customer agreed a final amount? \xb7 F9":"Customer agreed a final amount?",b6,b6,b6,b6,b6,b6,b6,b6),new A.bhN(b5),b6),b6))}j=c1.a.d===B.aq
+if(j)p.push(A.cs(A.a([A.np(B.bSI,new A.bhO(b5),b5.x,b6)],h),B.aL,8,8))
+if(!j){i=b5.c.A(b9).f.a
+i===$&&A.b()
+p.push(new A.U(B.cQ,A.o("Staff limit: making down by up to "+B.f.v(i.ch.a.ch.f,0)+" points; more needs the owner's PIN",b6,b6,b6,b6,B.a_C,b6,b6,b6),b6))}i=s.Q
+i===$&&A.b()
+i=A.bb(i)
+e=s.x
+e=e!=null&&A.c5B(b5.gM8()).length===1?"Making "+new A.eq(B.br,e,!1).gd5():"Making"
+d=s.as
+d===$&&A.b()
 c=t.Yr
-e=A.a([new A.aA(["Metal",h,!1,null]),new A.aA([f,A.bb(e),!1,null])],c)
-h=s.at
-h===$&&A.b()
-if(h!==0)e.push(new A.aA(["Stones",A.bb(h),!1,null]))
-h=s.db
-h===$&&A.b()
-if(h!==0)e.push(new A.aA(["Repair / labour (18% GST)",A.bb(h),!1,null]))
-h=s.ax
-h===$&&A.b()
-if(h!==0)e.push(new A.aA([new A.bhP(b5).$0(),"\u2212"+A.bb(h),!1,null]))
-h=s.ay
-h===$&&A.b()
-e.push(new A.aA(["Taxable",A.bb(h),!0,null]))
-if(b5.x){h=s.dx
-h===$&&A.b()
-h=h?"IGST":"IGST 3%"
-f=s.cx
-f===$&&A.b()
-e.push(new A.aA([h,A.bb(f),!1,null]))}else{h=s.dx
-h===$&&A.b()
-f=h?"CGST":"CGST 1.5%"
+d=A.a([new A.aA(["Metal",i,!1,null]),new A.aA([e,A.bb(d),!1,null])],c)
+i=s.at
+i===$&&A.b()
+if(i!==0)d.push(new A.aA(["Stones",A.bb(i),!1,null]))
+i=s.db
+i===$&&A.b()
+if(i!==0)d.push(new A.aA(["Repair / labour (18% GST)",A.bb(i),!1,null]))
+i=s.ax
+i===$&&A.b()
+if(i!==0)d.push(new A.aA([new A.bhP(b5).$0(),"\u2212"+A.bb(i),!1,null]))
+i=s.ay
+i===$&&A.b()
+d.push(new A.aA(["Taxable",A.bb(i),!0,null]))
+if(b5.x){i=s.dx
+i===$&&A.b()
+i=i?"IGST":"IGST 3%"
+e=s.cx
+e===$&&A.b()
+d.push(new A.aA([i,A.bb(e),!1,null]))}else{i=s.dx
+i===$&&A.b()
+e=i?"CGST":"CGST 1.5%"
 b=s.ch
 b===$&&A.b()
 b=A.bb(b)
-h=h?"SGST":"SGST 1.5%"
+i=i?"SGST":"SGST 1.5%"
 a=s.CW
 a===$&&A.b()
-B.e.G(e,A.a([new A.aA([f,b,!1,null]),new A.aA([h,A.bb(a),!1,null])],c))}h=s.cy
-h===$&&A.b()
-if(h!==0){f=h>0?"+":"\u2212"
-e.push(new A.aA(["Round off",f+A.bb(Math.abs(h)),!1,null]))}h=s.dy
-h===$&&A.b()
-e.push(new A.aA(["Bill total",A.af(h),!0,null]))
-for(f=b5.f,c=f.length,a0=0;a0<f.length;f.length===c||(0,A.m)(f),++a0){a1=f[a0]
+B.e.G(d,A.a([new A.aA([e,b,!1,null]),new A.aA([i,A.bb(a),!1,null])],c))}i=s.cy
+i===$&&A.b()
+if(i!==0){e=i>0?"+":"\u2212"
+d.push(new A.aA(["Round off",e+A.bb(Math.abs(i)),!1,null]))}i=s.dy
+i===$&&A.b()
+d.push(new A.aA(["Bill total",A.af(i),!0,null]))
+for(e=b5.f,c=e.length,a0=0;a0<e.length;e.length===c||(0,A.m)(e),++a0){a1=e[a0]
 b=A.cao(a1)
 a=a1.a
 a2=a1.c
@@ -88878,18 +88876,18 @@ a4===$&&A.b()
 a4=B.f.v(A.D(a4),3)
 a2=A.jf(a,a3,a2).y
 a2===$&&A.b()
-e.push(new A.aA([b+" (fine "+a4+" g)","\u2212"+A.af(a2),!1,null]))}c=b5.w
-if(c>0.5)e.push(new A.aA(["Held money used","\u2212"+A.af(c),!1,null]))
+d.push(new A.aA([b+" (fine "+a4+" g)","\u2212"+A.af(a2),!1,null]))}c=b5.w
+if(c>0.5)d.push(new A.aA(["Held money used","\u2212"+A.af(c),!1,null]))
 if(b5.gxm()>0){b9=b5.c.A(b9).f.a
 b9===$&&A.b()
 b9=b9.ch.a.ch.b}else b9=!1
-if(b9)e.push(new A.aA(["Scheme 12th instalment","\u2212"+A.af(b5.gxm()),!1,null]))
+if(b9)d.push(new A.aA(["Scheme 12th instalment","\u2212"+A.af(b5.gxm()),!1,null]))
 b9=s.fr
 b9===$&&A.b()
 if(b9>0){c=s.fx
 c===$&&A.b()
-e.push(new A.aA(["Net payable",A.af(c),!0,B.T]))}e=A.dv(new A.fX(e,b6),B.a0,B.a8)
-c=A.a([],p)
+d.push(new A.aA(["Net payable",A.af(c),!0,B.T]))}d=A.dv(new A.fX(d,b6),B.a0,B.a8)
+c=A.a([],h)
 if(b5.d!=null&&b5.a.r==null&&b5.aeg(c1).length!==0)c.push(A.dp(B.Hc,b6,A.o(b5.gkw().length===0?"Use scheme card":"Add another scheme card",b6,b6,b6,b6,b6,b6,b6,b6),new A.bi_(b5,c1),b6))
 if(c1.ay.d||j){j=b5.c
 j.toString
@@ -88897,12 +88895,12 @@ c.push(A.dp(B.xi,b6,A.o(A.bj(j,B.bt,q).w.a.a>=980?"Old metal \xb7 F5":"Old metal
 j=j>0.5?"Using held "+A.af(j):"Use held money ("+A.af(o)+")"
 b=b5.c
 b.toString
-c.push(A.np(A.o(A.bj(b,B.bt,q).w.a.a>=980?j+" \xb7 F10":j,b6,b6,b6,b6,b6,b6,b6,b6),new A.bi0(b5,o,s),b5.w>0.5,b6))}for(d=0;d<f.length;++d){j=A.cao(f[d])
-b=f[d]
+c.push(A.np(A.o(A.bj(b,B.bt,q).w.a.a>=980?j+" \xb7 F10":j,b6,b6,b6,b6,b6,b6,b6,b6),new A.bi0(b5,o,s),b5.w>0.5,b6))}for(f=0;f<e.length;++f){j=A.cao(e[f])
+b=e[f]
 b=A.jf(b.a,b.w,b.c).y
 b===$&&A.b()
-c.push(A.a8X(b6,b6,b6,b6,b6,A.o(j+" "+A.af(b),b6,b6,b6,b6,b6,b6,b6,b6),b6,new A.bi1(b5,d),new A.bi2(b5,c2,d),b6,b6))}j=A.cs(c,B.aL,8,8)
-c=A.a([],p)
+c.push(A.a8X(b6,b6,b6,b6,b6,A.o(j+" "+A.af(b),b6,b6,b6,b6,b6,b6,b6,b6),b6,new A.bi1(b5,f),new A.bi2(b5,c2,f),b6,b6))}j=A.cs(c,B.aL,8,8)
+c=A.a([],h)
 for(a0=0;a0<5;++a0){a5=B.im[a0]
 $label0$0:{if(B.b7===a5){b=a5.c
 a=b5.c
@@ -88918,12 +88916,12 @@ a.toString
 if(A.bj(a,B.bt,q).w.a.a>=980)b+=" \xb7 Alt+B"
 break $label0$0}b=a5.c
 break $label0$0}b=A.o(b,b6,b6,b6,b6,b6,b6,b6,b6)
-c.push(A.ww(b6,b,n.length===0?b6:new A.bi3(b5,a5,s)))}c=A.a([B.bVE,B.aS,A.cs(c,B.aL,6,6)],p)
-for(b=b5.r,d=0;d<b.length;++d){a=new A.bK(10,10)
-a2=b[d]
-a2=A.a([A.o(a2.a.xY(a2.b,a2.c),b6,b6,b6,b6,B.uc,b6,b6,b6)],p)
-if(A.bWQ(b[d]).length!==0)a2.push(A.o(A.bWQ(b[d]),b6,b6,b6,b6,B.a_o,b6,b6,b6))
-c.push(A.aQ(b6,A.ak(A.a([new A.e0(1,B.bm,A.a1(a2,B.ad,B.q,B.r),b6),A.dN(!1,b6,!0,B.xh,b6,!0,b6,b6,b6,b6,b6,b6,b6,b6,b6,b6,new A.bi4(b5,d),b6,b6,b6,b6,b6,b6,b6)],p),B.A,B.q,B.r,b6),B.y,b6,b6,new A.b8(B.ho,b6,b6,new A.dR(a,a,a,a),b6,b6,B.ab),b6,b6,B.cJ,B.j6,b6,b6,b6))}if(n.length!==0){a=s.go
+c.push(A.ww(b6,b,n.length===0?b6:new A.bi3(b5,a5,s)))}c=A.a([B.bVE,B.aS,A.cs(c,B.aL,6,6)],h)
+for(b=b5.r,f=0;f<b.length;++f){a=new A.bK(10,10)
+a2=b[f]
+a2=A.a([A.o(a2.a.xY(a2.b,a2.c),b6,b6,b6,b6,B.uc,b6,b6,b6)],h)
+if(A.bWQ(b[f]).length!==0)a2.push(A.o(A.bWQ(b[f]),b6,b6,b6,b6,B.a_o,b6,b6,b6))
+c.push(A.aQ(b6,A.ak(A.a([new A.e0(1,B.bm,A.a1(a2,B.ad,B.q,B.r),b6),A.dN(!1,b6,!0,B.xh,b6,!0,b6,b6,b6,b6,b6,b6,b6,b6,b6,b6,new A.bi4(b5,f),b6,b6,b6,b6,b6,b6,b6)],h),B.A,B.q,B.r,b6),B.y,b6,b6,new A.b8(B.ho,b6,b6,new A.dR(a,a,a,a),b6,b6,B.ab),b6,b6,B.cJ,B.j6,b6,b6,b6))}if(n.length!==0){a=s.go
 a===$&&A.b()
 a=Math.abs(a)>=0.5}else a=!1
 if(a){a=s.go
@@ -88935,80 +88933,80 @@ if(a>0){a6=b.length===0?"No payment entered: ":""
 a=A.af(a)
 a7=b5.ay
 a7=a7!=null?" \xb7 due "+A.dm(a7):""
-a7=A.ak(A.a([B.afZ,B.cE,A.ag(A.o(a6+a+" goes as UDHAAR"+a7+" \xb7 limit "+A.af(s.ga4j()),b6,b6,b6,b6,B.bLa,b6,b6,b6),1)],p),B.A,B.q,B.r,b6)
+a7=A.ak(A.a([B.afZ,B.cE,A.ag(A.o(a6+a+" goes as UDHAAR"+a7+" \xb7 limit "+A.af(s.ga4j()),b6,b6,b6,b6,B.bLa,b6,b6,b6),1)],h),B.A,B.q,B.r,b6)
 a=a7}else a=A.o(A.af(-a)+" extra: kept for the customer as a deposit",b6,b6,b6,b6,B.hN,b6,b6,b6)
-c.push(A.aQ(b6,a,B.y,b6,b6,new A.b8(a2,b6,a4,a3,b6,b6,B.ab),b6,b6,B.cJ,B.j6,b6,b6,b6))}j=A.a([e,B.a3,j,B.a3,A.dv(A.a1(c,B.ad,B.q,B.r),B.N,B.a8)],p)
-if(m.length!==0){e=A.aT(12)
-c=A.a([],p)
-for(a=m.length,a0=0;a0<m.length;m.length===a||(0,A.m)(m),++a0){d=m[a0]
-a2=d.c?"Cannot save: ":"Owner PIN: "
-c.push(A.o(a2+d.b,b6,b6,b6,b6,B.hN,b6,b6,b6))}B.e.G(j,A.a([B.a3,A.aQ(b6,A.a1(c,B.ad,B.q,B.r),B.y,b6,b6,new A.b8(B.de,b6,b6,e,b6,b6,B.ab),b6,b6,b6,B.dp,b6,b6,b6)],p))}j.push(B.aw)
-e=b5.ch?b6:new A.bi5(b5)
+c.push(A.aQ(b6,a,B.y,b6,b6,new A.b8(a2,b6,a4,a3,b6,b6,B.ab),b6,b6,B.cJ,B.j6,b6,b6,b6))}j=A.a([d,B.a3,j,B.a3,A.dv(A.a1(c,B.ad,B.q,B.r),B.N,B.a8)],h)
+if(m.length!==0){d=A.aT(12)
+c=A.a([],h)
+for(a=m.length,a0=0;a0<m.length;m.length===a||(0,A.m)(m),++a0){f=m[a0]
+a2=f.c?"Cannot save: ":"Owner PIN: "
+c.push(A.o(a2+f.b,b6,b6,b6,b6,B.hN,b6,b6,b6))}B.e.G(j,A.a([B.a3,A.aQ(b6,A.a1(c,B.ad,B.q,B.r),B.y,b6,b6,new A.b8(B.de,b6,b6,d,b6,b6,B.ab),b6,b6,b6,B.dp,b6,b6,b6)],h))}j.push(B.aw)
+d=b5.ch?b6:new A.bi5(b5)
 c=b5.c
 c.toString
-e=A.ag(A.j6(!1,A.o(A.bj(c,B.bt,q).w.a.a>=980?"Save \xb7 Ctrl+S":"Save",1,B.AT,b6,!1,b6,b6,b6,b6),b6,b6,b6,b6,b6,b6,e,b6,b6),2)
+d=A.ag(A.j6(!1,A.o(A.bj(c,B.bt,q).w.a.a>=980?"Save \xb7 Ctrl+S":"Save",1,B.AT,b6,!1,b6,b6,b6,b6),b6,b6,b6,b6,b6,b6,d,b6,b6),2)
 c=b5.ch
 a=c?b6:new A.bi6(b5)
 if(c)q=b5.CW?b7:"Saving\u2026"
 else{c=b5.c
 c.toString
-q=A.bj(c,B.bt,q).w.a.a>=980?"Save & print \xb7 Ctrl+P":b8}j.push(A.ak(A.a([e,B.bI,A.ag(A.bD(!1,A.o(q,b6,b6,b6,b6,b6,b6,b6,b6),B.y,b6,b6,b6,b6,b6,a,b6,B.aJ),3)],p),B.A,B.q,B.r,b6))
-a8=B.e.iR(k,2)
+q=A.bj(c,B.bt,q).w.a.a>=980?"Save & print \xb7 Ctrl+P":b8}j.push(A.ak(A.a([d,B.bI,A.ag(A.bD(!1,A.o(q,b6,b6,b6,b6,b6,b6,b6,b6),B.y,b6,b6,b6,b6,b6,a,b6,B.aJ),3)],h),B.A,B.q,B.r,b6))
+a8=B.e.iR(p,2)
 a9=B.e.cV(j,0,j.length-2)
 b0=b5.gnv()
-$label1$1:{if(0===b0){q=A.a([k[0],B.a3,B.bV2],p)
+$label1$1:{if(0===b0){q=A.a([p[0],B.a3,B.bV2],h)
 break $label1$1}if(1===b0){q=a8
 break $label1$1}q=a9
-break $label1$1}e=n.length
-if(e===0)e="No pieces yet"
-else{c=e===1?"piece":"pieces"
+break $label1$1}d=n.length
+if(d===0)d="No pieces yet"
+else{c=d===1?"piece":"pieces"
 a=b9>0?" \xb7 net payable":" \xb7 total"
-a=""+e+" "+c+a
-e=a}e=A.ag(A.o(e,b6,b6,b6,b6,B.be,b6,b6,b6),1)
+a=""+d+" "+c+a
+d=a}d=A.ag(A.o(d,b6,b6,b6,b6,B.be,b6,b6,b6),1)
 if(b9>0){b9=s.fx
-b9===$&&A.b()}else b9=h
-b9=A.ak(A.a([e,A.o(A.af(b9),b6,b6,b6,b6,A.ck(B.T,b6,b6,20,600),b6,b6,b6)],p),B.A,B.q,B.r,b6)
-h=b5.gnv()>0?new A.aX("Back",new A.bhQ(b5),B.pA,!1):b6
-if(b5.gnv()<2){if(b5.gnv()===0)e=b5.d==null?"Walk-in \xb7 Next":"Next"
-else e="Next: payment"
-e=new A.aX(e,b5.gnv()===1&&n.length===0?b6:new A.bhR(b5),B.Gl,!1)}else{e=b5.ch
-if(e)c=b5.CW?b7:"Saving\u2026"
+b9===$&&A.b()}else b9=i
+b9=A.ak(A.a([d,A.o(A.af(b9),b6,b6,b6,b6,A.ck(B.T,b6,b6,20,600),b6,b6,b6)],h),B.A,B.q,B.r,b6)
+i=b5.gnv()>0?new A.aX("Back",new A.bhQ(b5),B.pA,!1):b6
+if(b5.gnv()<2){if(b5.gnv()===0)d=b5.d==null?"Walk-in \xb7 Next":"Next"
+else d="Next: payment"
+d=new A.aX(d,b5.gnv()===1&&n.length===0?b6:new A.bhR(b5),B.Gl,!1)}else{d=b5.ch
+if(d)c=b5.CW?b7:"Saving\u2026"
 else c=b8
-c=new A.aX(c,e?b6:new A.bhS(b5),B.dV,!1)
-e=c}c=A.a([],t.d)
+c=new A.aX(c,d?b6:new A.bhS(b5),B.dV,!1)
+d=c}c=A.a([],t.d)
 if(b5.gnv()===2)c.push(new A.aX("Save without printing",b5.ch?b6:new A.bhT(b5),B.afn,!1))
 if(b5.a.r==null&&B.e.bz(n,new A.bhU()))c.push(new A.aX("Save as quotation (Q-, kept 7 days)",b5.ch?b6:b5.gaY6(),B.GJ,!1))
-b1=new A.is(e,h,c,b9,b6)
+b1=new A.is(d,i,c,b9,b6)
 b2=c0.gcb().gTe()
 b9=b2!=null
-if(b9){h=A.au(A.a4(b2),A.ab(b2),A.aE(b2),0,0)
-e=new A.T(Date.now(),0,!1)
-b3=h.l(0,A.au(A.a4(e),A.ab(e),A.aE(e),0,0))}else b3=!1
+if(b9){i=A.au(A.a4(b2),A.ab(b2),A.aE(b2),0,0)
+d=new A.T(Date.now(),0,!1)
+b3=i.l(0,A.au(A.a4(d),A.ab(d),A.aE(d),0,0))}else b3=!1
 if(!b3&&b5.a.r==null){c1=A.o("Today's rates are not entered",b6,b6,b6,b6,A.ck(B.T,b6,b6,22,600),B.bF,b6,b6)
 q=c0.b.d===B.aq
-c1=A.a([B.agH,B.aw,c1,B.X,A.o(q?"Enter today's gold and silver rates first, so the bill uses the right rate.":"Ask the owner to enter today's gold and silver rates. Bills can be made after that.",b6,b6,b6,b6,B.aX,B.bF,b6,b6)],p)
-if(b9)B.e.G(c1,A.a([B.aS,A.o("Last entered "+A.dm(b2),b6,b6,b6,b6,B.af,B.bF,b6,b6)],p))
+c1=A.a([B.agH,B.aw,c1,B.X,A.o(q?"Enter today's gold and silver rates first, so the bill uses the right rate.":"Ask the owner to enter today's gold and silver rates. Bills can be made after that.",b6,b6,b6,b6,B.aX,B.bF,b6,b6)],h)
+if(b9)B.e.G(c1,A.a([B.aS,A.o("Last entered "+A.dm(b2),b6,b6,b6,b6,B.af,B.bF,b6,b6)],h))
 c1.push(B.ft)
 if(q)c1.push(A.hU(B.pK,B.bUb,new A.bhV(b5,c2),b6))
-return A.bx(B.bFp,B.aG,new A.by(A.bt(c1,b6,B.dq,b6,B.U,!1),b6),b6,b6,b6)}b4=n.length!==0||b.length!==0||f.length!==0
+return A.bx(B.bFp,B.aG,new A.by(A.bt(c1,b6,B.dq,b6,B.U,!1),b6),b6,b6,b6)}b4=n.length!==0||b.length!==0||e.length!==0
 if(!l&&b5.gnv()>0)b9=!1
 else b9=!b4||b5.ch
 n=l?b6:b1
-h=b5.a.r
-if(h!=null)h="Edit "+h.c
-else if(b5.gv1()!=null)h="Deliver "+b5.gv1().e
-else if(b5.gOB()!=null)h="Repair bill "+b5.gOB().w
-else if((b5.gkw().length===0?b6:B.e.ga_(b5.gkw()))!=null){h=b5.gkw()
-h="Redeem "+new A.a7(h,new A.bhW(),A.L(h).i("a7<1,d>")).Z(0," + ")}else h=r?"New bill \xb7 practice":"New bill"
-f=b5.aVV()
-c1=A.a([B.ei,new A.cA(c1.CW,new A.bhX(b5),b6,b6,t.D0)],p)
+i=b5.a.r
+if(i!=null)i="Edit "+i.c
+else if(b5.gv1()!=null)i="Deliver "+b5.gv1().e
+else if(b5.gOB()!=null)i="Repair bill "+b5.gOB().w
+else if((b5.gkw().length===0?b6:B.e.ga_(b5.gkw()))!=null){i=b5.gkw()
+i="Redeem "+new A.a7(i,new A.bhW(),A.L(i).i("a7<1,d>")).Z(0," + ")}else i=r?"New bill \xb7 practice":"New bill"
+e=b5.aVV()
+c1=A.a([B.ei,new A.cA(c1.CW,new A.bhX(b5),b6,b6,t.D0)],h)
 if(b5.fy)c1.push(B.akR)
-if(l)q=new A.U(B.a8,A.ak(A.a([A.ag(A.bt(k,b6,b6,b6,B.U,!1),3),B.tV,A.aO(A.bt(j,b6,b6,b6,B.U,!1),b6,380)],p),B.ad,B.q,B.r,b6),b6)
-else{p=A.a([A.nr(B.c8,new A.Kg(B.b3V,b5.gnv(),!1,b6),B.x,!1,b6,b6,b6,b6,b6,b6,b6,b6,b6,b6,b6,b6,b6,b6,b6,b6,b6,b6,b6,b6,b6,new A.bhY(b5,c2),b6,b6,b6,!1,B.eg),B.aw],p)
+if(l)q=new A.U(B.a8,A.ak(A.a([A.ag(A.bt(p,b6,b6,b6,B.U,!1),3),B.tV,A.aO(A.bt(j,b6,b6,b6,B.U,!1),b6,380)],h),B.ad,B.q,B.r,b6),b6)
+else{p=A.a([A.nr(B.c8,new A.Kg(B.b3V,b5.gnv(),!1,b6),B.x,!1,b6,b6,b6,b6,b6,b6,b6,b6,b6,b6,b6,b6,b6,b6,b6,b6,b6,b6,b6,b6,b6,new A.bhY(b5,c2),b6,b6,b6,!1,B.eg),B.aw],h)
 B.e.G(p,q)
 p=A.bt(p,b6,B.abn,b6,B.U,!1)
 q=p}c1.push(A.ag(q,1))
-return A.abw(b9,A.bx(new A.d8(h,f,B.a5,b6),B.aG,A.a1(c1,B.A,B.q,B.r),n,b6,b6),new A.bhZ(b5,l,c2),t.K)},
+return A.abw(b9,A.bx(new A.d8(i,e,B.a5,b6),B.aG,A.a1(c1,B.A,B.q,B.r),n,b6,b6),new A.bhZ(b5,l,c2),t.K)},
 aCc(a6){var s,r,q,p,o,n,m,l,k,j,i,h,g,f,e,d,c,b,a,a0=this,a1=A.c5B(a0.gM8()),a2=a1.length,a3=a2>=2,a4=new A.bgU(),a5=A.aC(t.N)
 for(s=0;s<a1.length;a1.length===a2||(0,A.m)(a1),++s)a5.C(0,a1[s].a)
 a2=a0.go
