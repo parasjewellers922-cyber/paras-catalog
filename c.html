@@ -37,6 +37,9 @@
     .photo .none { color: var(--gold-bright); font-size: 30px; }
     .tag { position: absolute; top: 8px; left: 8px; background: rgba(176,122,30,0.12); color: var(--amber);
            border-radius: 999px; padding: 2px 9px; font-size: 11px; font-weight: 600; }
+    .tag.sold { background: rgba(60,40,35,0.82); color: #fff; }
+    .card.gone .photo img, .card.gone .photo .none { opacity: 0.45; }
+    .card.gone .name, .card.gone .meta { color: var(--muted); }
     .info { padding: 9px 11px 11px; }
     .name { font-family: 'Playfair Display', Georgia, serif; font-size: 16px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
     .meta { font-size: 12px; color: var(--muted); }
@@ -189,28 +192,44 @@
       var shop = link.shopName || 'Paras Jewellers';
       document.title = shop + ' · ' + (link.title || 'Designs for you');
       $('title').textContent = link.title || 'Designs picked for you';
-      var items = link.items || [];
+      // What happened to each design since the link was sent: sold or
+      // booked (shown as Sold), mto (sold, can be made again), removed.
+      var st = link.state || {};
+      var items = (link.items || []).filter(function (it) { return st[it.id] !== 'removed'; });
+      items.sort(function (a, b) { return (gone(a) ? 1 : 0) - (gone(b) ? 1 : 0); });
+      function gone(it) { return st[it.id] === 'sold' || st[it.id] === 'booked'; }
+      var open = items.filter(function (it) { return !gone(it); }).length;
       var made = link.createdAt instanceof Date ? link.createdAt : new Date();
       var until = link.expiresAt instanceof Date ? link.expiresAt : null;
-      $('sub').textContent = items.length + (items.length === 1 ? ' design' : ' designs') +
-        (until ? ' · this link is open till ' + day(until) : '');
       setPhone(link.shopPhone, 'Hello ' + shop + ', I saw the designs you sent me' +
         (link.title ? ' (' + link.title + ')' : '') + '. ');
+      if (open === 0) {
+        state('These designs are no longer available',
+          'They have been sold since we sent this link. Message us on WhatsApp and we will share similar designs.');
+        $('sub').textContent = until ? 'This link is open till ' + day(until) : '';
+        $('addr').textContent = link.shopAddress || '';
+        return;
+      }
+      $('sub').textContent = items.length + (items.length === 1 ? ' design' : ' designs') +
+        (items.length > open ? ' · ' + (items.length - open) + ' sold' : '') +
+        (until ? ' · this link is open till ' + day(until) : '');
       $('note').textContent = link.showPrices
         ? 'Prices are estimates at gold and silver rates of ' + day(made) + ', including GST. The final amount is confirmed at the shop.'
         : 'Ask us for today’s price of any design.';
       $('addr').textContent = link.shopAddress || '';
       var grid = $('grid');
       items.forEach(function (it, i) {
+        var sold = gone(it);
+        var mto = it.inStock === false || st[it.id] === 'mto';
         var b = document.createElement('button');
-        b.className = 'card';
+        b.className = 'card' + (sold ? ' gone' : '');
         b.innerHTML =
           '<div class="photo">' + (it.thumb ? '<img loading="lazy" alt="" src="' + esc(it.thumb) + '" onerror="noPhoto(this)">' : '<span class="none">◆</span>') +
-          (it.inStock === false ? '<span class="tag">Made to order</span>' : '') + '</div>' +
+          (sold ? '<span class="tag sold">Sold</span>' : mto ? '<span class="tag">Made to order</span>' : '') + '</div>' +
           '<div class="info"><div class="name">' + esc(it.name) + '</div>' +
           '<div class="meta">' + esc(it.purity) + ' · ' + grams(it.weight) + '</div>' +
-          (link.showPrices && it.price != null ? '<div class="price">' + inr(it.price) + '</div>' : '') + '</div>';
-        b.onclick = function () { open(it, link); };
+          (!sold && link.showPrices && it.price != null ? '<div class="price">' + inr(it.price) + '</div>' : '') + '</div>';
+        b.onclick = function () { showItem(it, link, sold, mto); };
         grid.appendChild(b);
       });
     }
@@ -226,20 +245,22 @@
       img.replaceWith(s);
     };
 
-    function open(it, link) {
+    function showItem(it, link, sold, mto) {
       var shop = link.shopName || 'Paras Jewellers';
-      var ask = 'Hello ' + shop + ', I would like to know more about ' + it.name +
-        (it.code ? ' (' + it.code + ')' : '') + ' from the designs you sent me.';
+      var ask = sold
+        ? 'Hello ' + shop + ', ' + it.name + (it.code ? ' (' + it.code + ')' : '') + ' from the designs you sent me is sold. Do you have something similar?'
+        : 'Hello ' + shop + ', I would like to know more about ' + it.name +
+          (it.code ? ' (' + it.code + ')' : '') + ' from the designs you sent me.';
       $('sheet').innerHTML =
         '<div class="photo">' + (it.photo ? '<img alt="" src="' + esc(it.photo) + '" data-alt="' + esc(it.thumb || '') + '" onerror="noPhoto(this)">' : '<span class="none">◆</span>') + '</div>' +
         '<div class="detail"><div class="name">' + esc(it.name) + '</div>' +
         '<div class="meta">' + esc(it.category) + '</div>' +
         '<div class="meta">' + esc(it.purity) + ' · ' + grams(it.weight) +
-        (it.inStock === false ? ' · Made to order' : ' · In the shop') + '</div>' +
-        (link.showPrices && it.price != null ? '<div class="price">' + inr(it.price) + '</div><div class="meta">Estimated price with GST</div>' : '') +
+        (sold ? ' · Sold' : mto ? ' · Made to order' : ' · In the shop') + '</div>' +
+        (!sold && link.showPrices && it.price != null ? '<div class="price">' + inr(it.price) + '</div><div class="meta">Estimated price with GST</div>' : '') +
         '<div style="height:10px"></div>' +
         '<a class="btn wa" target="_blank" rel="noopener" href="https://wa.me/' + esc(link.shopPhone || FALLBACK_PHONE) +
-        '?text=' + encodeURIComponent(ask) + '">Ask about this design on WhatsApp</a></div>';
+        '?text=' + encodeURIComponent(ask) + '">' + (sold ? 'Ask for similar designs on WhatsApp' : 'Ask about this design on WhatsApp') + '</a></div>';
       $('overlay').classList.add('open');
     }
     function closeSheet() { $('overlay').classList.remove('open'); }
